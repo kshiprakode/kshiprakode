@@ -51,19 +51,6 @@
 
 	</div>
 
-	<div class="content">
-		<p class="green">Executing contact_me.sh...</p>
-		<div><i class="fa fa-envelope" aria-hidden="true"></i> Email - <a target='_blank' href="mailto:hi@kkode1@umbc.edu?Subject=Hi!">kkode1@umbc.edu</a></div>
-		<div><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin - <a target='_blank' href="https://www.linkedin.com/in/kshiprakode">https://www.linkedin.com/in/kshiprakode</a></div>
-		<div><i class="fa fa-github" aria-hidden="true"></i> GitHub - <a target='_blank' href="https://github.com/kshiprakode">https://github.com/kshiprakode</a></div>
-		<div><i class="fa fa-map-marker" aria-hidden="true"></i> Address - <a target='_blank' href="https://www.google.com/maps/place/4728+Aldgate+Green,+Arbutus,+MD+21227/@39.2624692,-76.6982992,17z/data=!3m1!4b1!4m5!3m4!1s0x89c81c51fa9a549b:0x5f143596eb2895df!8m2!3d39.262469!4d-76.698299">4728 Aldgate Green, Baltimore, MD - 21227</a></div>
-		<div><i class="fa fa-phone" aria-hidden="true"></i> Phone - (443)759-1424</div>
-		<br>
-		<div class="cmd">/kshiprakode/welcome.sh$ </div>
-		<div><button><b class="green"><u>A</u></b>bout Me</button><br><button><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><b class="green"><u>R</u></b>esume</button><br><button><b class="green"><u>S</u></b>ocial</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>
-		Enter your option: <input autofocus="autofocus"></input>	
-	</div>
-	
 	<div id = "here"></div>
 
 </body>
@@ -90,7 +77,7 @@ function addElement () {
   var newDiv = document.createElement("div"); 
   newDiv.className = "content";
   newDiv.id = "contact_me";
-  newDiv.innerHTML = '<p class="green">Executing contact_me.sh...</p><div>Email - <a href="mailto:hi@tejasbhalerao.com?Subject=Hi!">kkode1@umbc.edu</a></div><div>Linkedin - <a href="https://www.linkedin.com/in/kshiprakode">https://www.linkedin.com/in/kshiprakode</a></div><div>GitHub - kkode1@umbc.edu</div><div>Address - 4728 Aldgate Green, Baltimore, MD - 21227</div><div>Phone - 443-759-1424s</div><br><div class="cmd">/kshiprakode/welcome.sh$ </div> <div><button><b class="green"><u>A</u></b>bout Me</button><br><button><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><b class="green"><u>R</u></b>esume</button><br><button><b class="green"><u>S</u></b>ocial</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
+  newDiv.innerHTML = '<p class="green">Executing contact_me.sh...</p><div><i class="fa fa-envelope" aria-hidden="true"></i> Email - <a target="_blank" href="mailto:hi@kkode1@umbc.edu?Subject=Hi!">kkode1@umbc.edu</a></div><div><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin - <a target="_blank" href="https://www.linkedin.com/in/kshiprakode">https://www.linkedin.com/in/kshiprakode</a></div><div><i class="fa fa-github" aria-hidden="true"></i> GitHub - <a target="_blank" href="https://github.com/kshiprakode">https://github.com/kshiprakode</a></div><div><i class="fa fa-map-marker" aria-hidden="true"></i> Address - <a target="_blank" href="https://www.google.com/maps/place/4728+Aldgate+Green,+Arbutus,+MD+21227/@39.2624692,-76.6982992,17z/data=!3m1!4b1!4m5!3m4!1s0x89c81c51fa9a549b:0x5f143596eb2895df!8m2!3d39.262469!4d-76.698299">4728 Aldgate Green, Baltimore, MD - 21227</a></div><div><i class="fa fa-phone" aria-hidden="true"></i> Phone - (443)759-1424</div><br><div class="cmd">/kshiprakode/welcome.sh$ </div><div><button><b class="green"><u>A</u></b>bout Me</button><br><button><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><b class="green"><u>R</u></b>esume</button><br><button><b class="green"><u>S</u></b>ocial</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("content"); 
   document.body.insertBefore(newDiv, currentDiv); 
