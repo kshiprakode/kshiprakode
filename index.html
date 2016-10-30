@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Kshipra Kode</title>
+  <meta name="description" content="Kshipra Kode Portfolio">
+  <meta name="author" content="Kshipra Kode">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<div>
+		<nav class="navbar navbar-fixed-top">
+	  		<div class="container-fluid">
+				<div class="title">
+					<div class="name">Kshipra Kode</div>
+					<div class="position">Software Engineer | Web | Mobile</div>
+					<hr>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="content">
+
+		<div>
+			(c) 2016 Kshipra Kode. All rights reserved.
+		</div>
+
+		<div class="cmd">/kshiprakode/welcome.sh$ </div>
+
+		<div>
+			<button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br>
+			<button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br>
+			<button><b class="green"><u>T</u></b>imeline</button><br>
+			<button><b class="green"><u>R</u></b>esume</button><br>
+			<button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br>
+			<button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br>
+
+		</div>
+	
+		Enter your option: <input autofocus="autofocus"></input>
+
+	</div>
+
+	<div class="content">
+		<p class="green">Executing contact_me.sh...</p>
+		<div><i class="fa fa-envelope" aria-hidden="true"></i> Email - <a target='_blank' href="mailto:hi@kkode1@umbc.edu?Subject=Hi!">kkode1@umbc.edu</a></div>
+		<div><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin - <a target='_blank' href="https://www.linkedin.com/in/kshiprakode">https://www.linkedin.com/in/kshiprakode</a></div>
+		<div><i class="fa fa-github" aria-hidden="true"></i> GitHub - <a target='_blank' href="https://github.com/kshiprakode">https://github.com/kshiprakode</a></div>
+		<div><i class="fa fa-map-marker" aria-hidden="true"></i> Address - <a target='_blank' href="https://www.google.com/maps/place/4728+Aldgate+Green,+Arbutus,+MD+21227/@39.2624692,-76.6982992,17z/data=!3m1!4b1!4m5!3m4!1s0x89c81c51fa9a549b:0x5f143596eb2895df!8m2!3d39.262469!4d-76.698299">4728 Aldgate Green, Baltimore, MD - 21227</a></div>
+		<div><i class="fa fa-phone" aria-hidden="true"></i> Phone - (443)759-1424</div>
+		<br>
+		<div class="cmd">/kshiprakode/welcome.sh$ </div>
+		<div><button><b class="green"><u>A</u></b>bout Me</button><br><button><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><b class="green"><u>R</u></b>esume</button><br><button><b class="green"><u>S</u></b>ocial</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>
+		Enter your option: <input autofocus="autofocus"></input>	
+	</div>
+	
+	<div id = "here"></div>
+
+</body>
+
+<script type="text/javascript">
+
+function addWorkEx () { 
+  // create a new div element 
+  // and give it some content 
+  var newDiv = document.createElement("div"); 
+  newDiv.className = "content";
+  newDiv.id = "contact_me";
+  newDiv.innerHTML = '<p class="green">Executing work_experience.sh...</p><div class="green">University of Maryland, Baltimore County - <b>Graduate Teaching Assistant</b> </div><div>CMSC 202: Computer Majors II (Programming in C, C++)<br>-Responsible for conducting lab sessions and office hours to help students with their code, assignments, and exam papers.<br>CMSC 443: Cryptology- Grade and help students in their projects for the Subject<br>CMSC 341: Principles of Programming Languages<br>- Grade assignments and projects for the Subject</div><div class="green">SparkSoft Corporation - <b>Product Development Intern</b> </div><div></div><div class="green">Tibco Software - <b>Associate Member Technical Staff</b> </div><div></div><div class="cmd">/kshiprakode/welcome.sh$ </div> <div><button><b class="green"><u>A</u></b>bout Me</button><br><button><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><b class="green"><u>R</u></b>esume</button><br><button><b class="green"><u>S</u></b>ocial</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
+  // add the newly created element and its content into the DOM 
+  var currentDiv = document.getElementById("content"); 
+  document.body.insertBefore(newDiv, currentDiv); 
+  jse.executeScript("scroll(0, 250);");
+}
+
+
+function addElement () { 
+  // create a new div element 
+  // and give it some content 
+  var newDiv = document.createElement("div"); 
+  newDiv.className = "content";
+  newDiv.id = "contact_me";
+  newDiv.innerHTML = '<p class="green">Executing contact_me.sh...</p><div>Email - <a href="mailto:hi@tejasbhalerao.com?Subject=Hi!">kkode1@umbc.edu</a></div><div>Linkedin - <a href="https://www.linkedin.com/in/kshiprakode">https://www.linkedin.com/in/kshiprakode</a></div><div>GitHub - kkode1@umbc.edu</div><div>Address - 4728 Aldgate Green, Baltimore, MD - 21227</div><div>Phone - 443-759-1424s</div><br><div class="cmd">/kshiprakode/welcome.sh$ </div> <div><button><b class="green"><u>A</u></b>bout Me</button><br><button><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><b class="green"><u>R</u></b>esume</button><br><button><b class="green"><u>S</u></b>ocial</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
+  // add the newly created element and its content into the DOM 
+  var currentDiv = document.getElementById("content"); 
+  document.body.insertBefore(newDiv, currentDiv); 
+  jse.executeScript("scroll(0, 250);");
+}
+
+function addProjectMenu () { 
+  // create a new div element 
+  // and give it some content 
+  var newDiv = document.createElement("div"); 
+  newDiv.className = "content";
+  newDiv.id = "contact_me";
+  newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button><b class="green"><u>B</u></b>.Aware: Seattle Safety based on 911 calls</button><br><button>S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button><b class="green"><u>L</u></b>ocation Alert</button><br><button><b class="green"><u>M</u></b>ain Menu</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
+  // add the newly created element and its content into the DOM 
+  var currentDiv = document.getElementById("content"); 
+  document.body.insertBefore(newDiv, currentDiv); 
+  jse.executeScript("scroll(0, 250);");
+}
+
+
+function addAboutMe () { 
+  var newDiv = document.createElement("div"); 
+  newDiv.className = "content";
+  newDiv.id = "contact_me";
+  newDiv.innerHTML = '<p class="green">Executing about_me.sh...</p><div>Hello Howdy! Hows you doing?<br><div>';
+  // add the newly created element and its content into the DOM 
+  var currentDiv = document.getElementById("content"); 
+  document.body.insertBefore(newDiv, currentDiv); 
+  jse.executeScript("scroll(0, 250);");
+}
+
+
+</script>
+</html>
