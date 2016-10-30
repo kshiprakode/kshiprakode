@@ -7,7 +7,7 @@
   <title>Kshipra Kode</title>
   <meta name="description" content="Kshipra Kode Portfolio">
   <meta name="author" content="Kshipra Kode">
-
+  <link rel="icon" href="img/icon_kk.png">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -40,7 +40,7 @@
 		<div>
 			<button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br>
 			<button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br>
-			<button><b class="green"><u>T</u></b>imeline</button><br>
+			<button><b class="green"><u>E</u></b>ducation</button><br>
 			<button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br>
 			<button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br>
 			<button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br>
@@ -68,7 +68,7 @@ function addMenu () {
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("content"); 
   document.body.insertBefore(newDiv, currentDiv); 
-  jse.executeScript("scroll(0, 250);");
+  window.scrollBy(0, 100);
 }
 
 
@@ -78,11 +78,11 @@ function addWorkEx () {
   var newDiv = document.createElement("div"); 
   newDiv.className = "content";
   newDiv.id = "contact_me";
-  newDiv.innerHTML = '<p class="green">Executing work_experience.sh...</p><div class="green"><u>University of Maryland, Baltimore County - <b>Graduate Teaching Assistant</b></u></div><div>CMSC 202: Computer Majors II (Programming in C, C++)<br>-Responsible for conducting lab sessions and office hours to help students with their code, assignments, and exam papers.<br>CMSC 443: Cryptology- Grade and help students in their projects for the Subject<br>CMSC 341: Principles of Programming Languages<br>- Grade assignments and projects for the Subject</div><br><div class="green"><u>SparkSoft Corporation - <b>Product Development Intern</b></u></div><div>- Designing a cloud based sandboxing tool that allows to replicate the behavior of any REST based APIs<br>- Engineering the architecture and the work flow of the tool<br>- Responsible for developing the backend using MEAN (Mongo Express Angular Node) stack.<br>- Implemented the basic skeleton that accepts the request and response templates of an API and spawns a service that would replicate the API behavior</div><br><div class="green"><u>Tibco Software - <b>Associate Member Technical Staff</b></u></div><div>- Designed, developed and documented software projects in Tibco Spotfire, a Business Intelligence tool to test the collaboration of different modules with the data analytics model and various databases like Oracle, MySQL and MSSQL<br>- Engineered the mobile based project of Tibco Spotfire  using open Source tool, Appium to test the integration of the Tibco Spotfire Server  with the possible mobile platforms like Windows, iOS and Android</div><br><div class="cmd">/kshiprakode/welcome.sh$ </div> <div><button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br><button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br><button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
+  newDiv.innerHTML = '<p class="green">Executing work_experience.sh...</p><div class="green"><u>University of Maryland, Baltimore County - <b>Graduate Teaching Assistant</b></u></div><div class="timeline"><i>August 2015 - Present</i></div><div>CMSC 202: Computer Majors II (Programming in C, C++)<br>-Responsible for conducting lab sessions and office hours to help students with their code, assignments, and exam papers.<br>CMSC 443: Cryptology- Grade and help students in their projects for the Subject<br>CMSC 341: Principles of Programming Languages<br>- Grade assignments and projects for the Subject</div><br><div class="green"><u>SparkSoft Corporation - <b>Product Development Intern</b></u></div><div class="timeline"><i>June 2016 - August 2016</i></div><div>- Designing a cloud based sandboxing tool that allows to replicate the behavior of any REST based APIs<br>- Engineering the architecture and the work flow of the tool<br>- Responsible for developing the backend using MEAN (Mongo Express Angular Node) stack.<br>- Implemented the basic skeleton that accepts the request and response templates of an API and spawns a service that would replicate the API behavior</div><br><div class="green"><u>Tibco Software - <b>Associate Member Technical Staff</b></u></div><div class="timeline"><i>September 2013 - July 2015</i></div><div>- Designed, developed and documented software projects in Tibco Spotfire, a Business Intelligence tool to test the collaboration of different modules with the data analytics model and various databases like Oracle, MySQL and MSSQL<br>- Engineered the mobile based project of Tibco Spotfire  using open Source tool, Appium to test the integration of the Tibco Spotfire Server  with the possible mobile platforms like Windows, iOS and Android</div><br><div class="cmd">/kshiprakode/welcome.sh$ </div> <div><button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br><button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br><button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("content"); 
   document.body.insertBefore(newDiv, currentDiv); 
-  jse.executeScript("scroll(0, 250);");
+  window.scrollBy(0, 100);
 }
 
 
@@ -96,7 +96,7 @@ function addElement () {
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("content"); 
   document.body.insertBefore(newDiv, currentDiv); 
-  jse.executeScript("scroll(0, 250);");
+  window.scrollBy(0, 100);
 }
 
 function addProjectMenu () { 
@@ -109,7 +109,7 @@ function addProjectMenu () {
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("content"); 
   document.body.insertBefore(newDiv, currentDiv); 
-  jse.executeScript("scroll(0, 250);");
+  window.scrollBy(0, 100);
 }
 
 
@@ -121,7 +121,7 @@ function addAboutMe () {
   // add the newly created element and its content into the DOM 
   var currentDiv = document.getElementById("content"); 
   document.body.insertBefore(newDiv, currentDiv); 
-  jse.executeScript("scroll(0, 250);");
+  window.scrollBy(0, 100);
 }
 
 

@@ -35,6 +35,10 @@
 	color: white;
 }
 
+.timeline{
+	text-align: right;
+}
+
 body{
 	background-color: #191919;
 	color: white;
@@ -67,3 +71,4 @@ input{
 	border-bottom-width: 2px;
 
 }
+
