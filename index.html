@@ -31,7 +31,7 @@
 
   <div class="row" id="row">
 
-  	<div class="col-md-4">
+  	<div class="col-md-4" id = "left_content">
       <div class="content">
     
 <!--     	<div>
@@ -42,20 +42,20 @@
         Hey there! I am Kshipra Kode! Thank you for visiting my page. Please use the input box to navigate through the menu.
       </p>
 
-
+    <div id = "menu">
   		<div class="cmd">/kshiprakode/welcome.sh$ </div>
 
-  		<div id = "menu">
+  		
   			<button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br>
   			<button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br>
   			<button><b class="green"><u>E</u></b>ducation</button><br>
   			<button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br>
   			<button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br>
-  			<button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br>
+  			<button onclick="addContactMe();"><b class="green"><u>C</u></b>ontact Me!</button><br>
 
   		</div>
   	
-  		Enter your option: <input autofocus="autofocus"></input>
+  		Enter your option: <input id="input_box" autofocus="autofocus"></input>
 
       </div>
   	</div>
@@ -70,12 +70,31 @@
 <script type="text/javascript">
 
 
+
+document.getElementById("input_box").addEventListener("keydown", function(e) {
+    if(document.getElementById("input_box").value == 'A' || document.getElementById("input_box").value == 'a')
+      addAboutMe();
+    else if(document.getElementById("input_box").value == 'W' || document.getElementById("input_box").value == 'w')
+      addWorkEx();
+    else if(document.getElementById("input_box").value == 'E' || document.getElementById("input_box").value == 'e')
+      addAboutMe();
+    else if(document.getElementById("input_box").value == 'R' || document.getElementById("input_box").value == 'r')
+      window.open("https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing");
+    else if(document.getElementById("input_box").value == 'P' || document.getElementById("input_box").value == 'p')
+      addProjectMenu();
+    else if(document.getElementById("input_box").value == 'P' || document.getElementById("input_box").value == 'p')
+      addContactMe();
+    document.getElementById("input_box").value == '';
+
+}, false);
+
+
 function addMenu () { 
   // create a new div element 
   // and give it some content 
   var newDiv = document.createElement("div"); 
   newDiv.className = "col-md-8";
-  newDiv.innerHTML = '<div class="cmd">/kshiprakode/welcome.sh$ </div><div><button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br><button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br><button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>';
+  newDiv.innerHTML = '<div class="cmd">/kshiprakode/welcome.sh$ </div> <button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br> <button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br> <button><b class="green"><u>E</u></b>ducation</button><br> <button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br> <button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br> <button onclick="addContactMe();"><b class="green"><u>C</u></b>ontact Me!</button><br> </div> Enter your option: <input autofocus="autofocus"></input>';
   // add the newly created element and its content into the DOM 
   if(document.contains(document.getElementById("right_content")))
     document.getElementById("right_content").remove();
@@ -103,25 +122,30 @@ function addWorkEx () {
  }
 
 
-// function addElement () { 
-//   // create a new div element 
-//   // and give it some content 
-//   var newDiv = document.createElement("div"); 
-//   newDiv.className = "content";
-//   newDiv.id = "contact_me";
-//   newDiv.innerHTML = '<p class="green">Executing contact_me.sh...</p><div><i class="fa fa-envelope" aria-hidden="true"></i> Email - <a target="_blank" href="mailto:hi@kkode1@umbc.edu?Subject=Hi!">kkode1@umbc.edu</a></div><div><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin - <a target="_blank" href="https://www.linkedin.com/in/kshiprakode">https://www.linkedin.com/in/kshiprakode</a></div><div><i class="fa fa-github" aria-hidden="true"></i> GitHub - <a target="_blank" href="https://github.com/kshiprakode">https://github.com/kshiprakode</a></div><div><i class="fa fa-map-marker" aria-hidden="true"></i> Address - <a target="_blank" href="https://www.google.com/maps/place/4728+Aldgate+Green,+Arbutus,+MD+21227/@39.2624692,-76.6982992,17z/data=!3m1!4b1!4m5!3m4!1s0x89c81c51fa9a549b:0x5f143596eb2895df!8m2!3d39.262469!4d-76.698299">4728 Aldgate Green, Baltimore, MD - 21227</a></div><div><i class="fa fa-phone" aria-hidden="true"></i> Phone - (443)759-1424</div><br><div class="cmd">/kshiprakode/welcome.sh$ </div><div><button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br><button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br><button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>Enter your option: <input autofocus="autofocus"></input>';
-//   // add the newly created element and its content into the DOM 
-//   var currentDiv = document.getElementById("content"); 
-//   document.body.insertBefore(newDiv, currentDiv); 
-//   window.scrollBy(0, 100);
-// }
+function addContactMe() { 
+  // create a new div element 
+  // and give it some content 
+  var newDiv = document.createElement("div"); 
+  newDiv.className = "right_content col-md-8";
+  newDiv.id = "right_content";
+ newDiv.innerHTML = '<p class="green">Executing contact_me.sh...</p><div><i class="fa fa-envelope" aria-hidden="true"></i> Email - <a target="_blank" href="mailto:hi@kkode1@umbc.edu?Subject=Hi!">kkode1@umbc.edu</a></div><div><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin - <a target="_blank" href="https://www.linkedin.com/in/kshiprakode">https://www.linkedin.com/in/kshiprakode</a></div><div><i class="fa fa-github" aria-hidden="true"></i> GitHub - <a target="_blank" href="https://github.com/kshiprakode">https://github.com/kshiprakode</a></div><div><i class="fa fa-map-marker" aria-hidden="true"></i> Address - <a target="_blank" href="https://www.google.com/maps/place/4728+Aldgate+Green,+Arbutus,+MD+21227/@39.2624692,-76.6982992,17z/data=!3m1!4b1!4m5!3m4!1s0x89c81c51fa9a549b:0x5f143596eb2895df!8m2!3d39.262469!4d-76.698299">4728 Aldgate Green, Baltimore, MD - 21227</a></div><div><i class="fa fa-phone" aria-hidden="true"></i> Phone - (443)759-1424</div><br>';
+  // add the newly created element and its content into the DOM 
+  if(document.contains(document.getElementById("right_content")))
+    document.getElementById("right_content").innerHTML = newDiv.innerHTML;
+  else
+  {
+    var parentDiv = document.getElementById("row"); 
+    var currentDiv = document.getElementById("here"); 
+    parentDiv.insertBefore(newDiv, currentDiv.nextSibling); 
+  }
+}
 
 function addProjectMenu () { 
   // create a new div element 
   // and give it some content 
   var newDiv = document.createElement("div"); 
   newDiv.className = "col-md-8";
-  newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button><b class="green"><u>B</u></b>.Aware: Seattle Safety based on 911 calls</button><br><button>S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button><b class="green"><u>L</u></b>ocation Alert</button><br><button onclick="addMenu();"><b class="green"><u>M</u></b>ain Menu</button><br></div>';
+  newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button><b class="green"><u>B</u></b>.Aware: Seattle Safety</button><br><button>S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button><b class="green"><u>L</u></b>ocation Alert</button><br><button onclick="addMenu();"><b class="green"><u>M</u></b>ain Menu</button><br></div>';
   // add the newly created element and its content into the DOM 
   if(document.contains(document.getElementById("right_content")))
     document.getElementById("right_content").remove();

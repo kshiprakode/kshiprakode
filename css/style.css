@@ -41,6 +41,10 @@
 	color: white;
 }
 
+.left_content{
+	position: fixed;
+}
+
 .timeline{
 	text-align: right;
 }
@@ -50,7 +54,7 @@
 	padding: 1em;
 	margin: 0 auto;
 	height: inherit;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 body{
@@ -61,7 +65,7 @@ body{
 	font-family: "Courier New", Courier, monospace;
 	padding-top: 115px;
 	text-align: justify;
-	overflow: hidden;
+	overflow: auto;
 }
 
 hr{
