@@ -24,7 +24,13 @@
 .content{
 	padding: 1em;
 	margin: 0 auto;
-	width: 90%
+	height: 80vh;
+	border-right:1px solid #aaaaaa;
+}
+
+.row{
+	margin: 0 auto;
+	border:1px solid #aaaaaa;
 }
 
 .green{
@@ -37,6 +43,14 @@
 
 .timeline{
 	text-align: right;
+}
+
+.right_content
+{
+	padding: 1em;
+	margin: 0 auto;
+	height: inherit;
+	overflow: auto;
 }
 
 body{
