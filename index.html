@@ -31,12 +31,17 @@
 
   <div class="row" id="row">
 
-  	<div class="col-md-6">
+  	<div class="col-md-4">
       <div class="content">
     
-    	<div>
+<!--     	<div>
   			(c) 2016 Kshipra Kode. All rights reserved.
   		</div>
+ -->
+      <p>
+        Hey there! I am Kshipra Kode! Thank you for visiting my page. Please use the input box to navigate through the menu.
+      </p>
+
 
   		<div class="cmd">/kshiprakode/welcome.sh$ </div>
 
@@ -58,6 +63,7 @@
     <div id="here">
     </div>
 
+
   </div>
 </body>
 
@@ -68,7 +74,7 @@ function addMenu () {
   // create a new div element 
   // and give it some content 
   var newDiv = document.createElement("div"); 
-  newDiv.className = "col-md-6";
+  newDiv.className = "col-md-8";
   newDiv.innerHTML = '<div class="cmd">/kshiprakode/welcome.sh$ </div><div><button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br><button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br><button><b class="green"><u>T</u></b>imeline</button><br><button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br><button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br><button onclick="addElement();"><b class="green"><u>C</u></b>ontact Me!</button><br></div>';
   // add the newly created element and its content into the DOM 
   if(document.contains(document.getElementById("right_content")))
@@ -83,7 +89,7 @@ function addWorkEx () {
   // and give it some content 
 
  var newDiv = document.createElement("div"); 
-  newDiv.className = "right_content col-md-6";
+  newDiv.className = "right_content col-md-8";
   newDiv.id = "right_content";
    newDiv.innerHTML = '<p class="green">Executing work_experience.sh...</p><div class="green"><u>University of Maryland, Baltimore County - <b>Graduate Teaching Assistant</b></u></div><div class="timeline"><i>August 2015 - Present</i></div><div>CMSC 202: Computer Majors II (Programming in C, C++)<br>-Responsible for conducting lab sessions and office hours to help students with their code, assignments, and exam papers.<br>CMSC 443: Cryptology- Grade and help students in their projects for the Subject<br>CMSC 341: Principles of Programming Languages<br>- Grade assignments and projects for the Subject</div><br><div class="green"><u>SparkSoft Corporation - <b>Product Development Intern</b></u></div><div class="timeline"><i>June 2016 - August 2016</i></div><div>- Designing a cloud based sandboxing tool that allows to replicate the behavior of any REST based APIs<br>- Engineering the architecture and the work flow of the tool<br>- Responsible for developing the backend using MEAN (Mongo Express Angular Node) stack.<br>- Implemented the basic skeleton that accepts the request and response templates of an API and spawns a service that would replicate the API behavior</div><br><div class="green"><u>Tibco Software - <b>Associate Member Technical Staff</b></u></div><div class="timeline"><i>September 2013 - July 2015</i></div><div>- Designed, developed and documented software projects in Tibco Spotfire, a Business Intelligence tool to test the collaboration of different modules with the data analytics model and various databases like Oracle, MySQL and MSSQL<br>- Engineered the mobile based project of Tibco Spotfire  using open Source tool, Appium to test the integration of the Tibco Spotfire Server  with the possible mobile platforms like Windows, iOS and Android</div><br>';
   if(document.contains(document.getElementById("right_content")))
@@ -114,7 +120,7 @@ function addProjectMenu () {
   // create a new div element 
   // and give it some content 
   var newDiv = document.createElement("div"); 
-  newDiv.className = "col-md-6";
+  newDiv.className = "col-md-8";
   newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button><b class="green"><u>B</u></b>.Aware: Seattle Safety based on 911 calls</button><br><button>S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button><b class="green"><u>L</u></b>ocation Alert</button><br><button onclick="addMenu();"><b class="green"><u>M</u></b>ain Menu</button><br></div>';
   // add the newly created element and its content into the DOM 
   if(document.contains(document.getElementById("right_content")))
@@ -128,7 +134,7 @@ function addProjectMenu () {
 function addAboutMe () 
 { 
   var newDiv = document.createElement("div"); 
-  newDiv.className = "right_content col-md-6";
+  newDiv.className = "right_content col-md-8";
   newDiv.id = "right_content";
   newDiv.innerHTML = '<p class="green">Executing about_me.sh...</p><div>Hello Howdy! Hows you doing?<br></div>';
   // add the newly created element and its content into the DOM 
