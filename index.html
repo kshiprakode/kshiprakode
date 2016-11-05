@@ -23,7 +23,6 @@
 				<div class="title">
 					<div class="name">Kshipra Kode</div>
 					<div class="position">Software Engineer | Web | Mobile</div>
-					<hr>
 				</div>
 			</div>
 		</nav>
@@ -43,7 +42,7 @@
       </p>
 
     <div id = "menu">
-  		<div class="cmd">/kshiprakode/welcome.sh$ </div>
+  		<div class="cmd">/kshiprakode$ ./welcome </div>
 
   		
   			<button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br>
@@ -53,23 +52,26 @@
   			<button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br>
   			<button onclick="addContactMe();"><b class="green"><u>C</u></b>ontact Me!</button><br>
 
-  		</div>
+  		
   	
-  		Enter your option: <input id="input_box" autofocus="autofocus"></input>
+  	   	Enter your option: <input id="input_box" autofocus="autofocus"></input>
 
+        </div>
       </div>
   	</div>
 
     <div id="here">
     </div>
 
+  <!-- <div>
+      <p class="green">Executing education.sh...</p><div class="green"><u>University of Maryland, Baltimore County</u><br></div><div class="timeline"><i>August 2015 - May 2017</i></div> - <b>Master of Science - Computer Science</b><br> - <b>GPA </b> : 3.83 <br><b> - Courses Taken: </b></div><br><div class="green"><u>University of Pune<b>Bachelor of Engineering - Computer Engineering</b></u></div><div class="timeline"><i>August 2009 - July 2013</i></div><br>
+    </div>
+ -->
 
   </div>
 </body>
 
 <script type="text/javascript">
-
-
 
 document.getElementById("input_box").addEventListener("keydown", function(e) {
     if(document.getElementById("input_box").value == 'A' || document.getElementById("input_box").value == 'a')
@@ -89,12 +91,31 @@ document.getElementById("input_box").addEventListener("keydown", function(e) {
 }, false);
 
 
+document.getElementById("input_box_projects").addEventListener("keydown", function(e) {
+    if(document.getElementById("input_box").value == 'A' || document.getElementById("input_box").value == 'a')
+      addAboutMe();
+    else if(document.getElementById("input_box").value == 'W' || document.getElementById("input_box").value == 'w')
+      addWorkEx();
+    else if(document.getElementById("input_box").value == 'E' || document.getElementById("input_box").value == 'e')
+      addAboutMe();
+    else if(document.getElementById("input_box").value == 'R' || document.getElementById("input_box").value == 'r')
+      window.open("https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing");
+    else if(document.getElementById("input_box").value == 'P' || document.getElementById("input_box").value == 'p')
+      addProjectMenu();
+    else if(document.getElementById("input_box").value == 'c' || document.getElementById("input_box").value == 'C')
+      addContactMe();
+    document.getElementById("input_box").value = '';
+
+}, false);
+
+
+
 function addMenu () { 
   // create a new div element 
   // and give it some content 
   var newDiv = document.createElement("div"); 
   newDiv.className = "col-md-8";
-  newDiv.innerHTML = '<div class="cmd">/kshiprakode/welcome.sh$ </div> <button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br> <button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br> <button><b class="green"><u>E</u></b>ducation</button><br> <button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br> <button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br> <button onclick="addContactMe();"><b class="green"><u>C</u></b>ontact Me!</button><br> </div> Enter your option: <input autofocus="autofocus"></input>';
+  newDiv.innerHTML = '<div class="cmd">/kshiprakode/welcome.sh$ </div> <button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br> <button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br> <button><b class="green"><u>E</u></b>ducation</button><br> <button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br> <button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br> <button onclick="addContactMe();"><b class="green"><u>C</u></b>ontact Me!</button><br> Enter your option: <input id="input_box" autofocus="autofocus"></input></div> ';
   // add the newly created element and its content into the DOM 
   if(document.contains(document.getElementById("right_content")))
     document.getElementById("right_content").remove();
@@ -145,7 +166,7 @@ function addProjectMenu () {
   // and give it some content 
   var newDiv = document.createElement("div"); 
   newDiv.className = "col-md-8";
-  newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button><b class="green"><u>B</u></b>.Aware: Seattle Safety</button><br><button>S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button><b class="green"><u>L</u></b>ocation Alert</button><br><button onclick="addMenu();"><b class="green"><u>M</u></b>ain Menu</button><br></div>';
+  newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button><b class="green"><u>B</u></b>.Aware: Seattle Safety</button><br><button>S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button><b class="green"><u>L</u></b>ocation Alert</button><br><button onclick="addMenu();"><b class="green"><u>M</u></b>ain Menu</button><br></div>Enter your option: <input id="input_box_projects" autofocus="autofocus"></input>';
   // add the newly created element and its content into the DOM 
   if(document.contains(document.getElementById("right_content")))
     document.getElementById("right_content").remove();
