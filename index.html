@@ -38,7 +38,7 @@
   		</div>
  -->
       <p>
-        Hey there! I am Kshipra Kode! Thank you for visiting my page. Please use the input box to navigate through the menu.
+        Hey there! I am Kshipra Kode! Thank you for visiting my page. Please click on the menu items to navigate through the menu.
       </p>
 
     <div id = "menu">
@@ -47,15 +47,12 @@
   		
   			<button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br>
   			<button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br>
-  			<button><b class="green"><u>E</u></b>ducation</button><br>
-  			<button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br>
+  			<button onclick="addEducation();"><b class="green"><u>E</u></b>ducation</button><br>
+  			<button onclick="addResumeText();"><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br>
   			<button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br>
   			<button onclick="addContactMe();"><b class="green"><u>C</u></b>ontact Me!</button><br>
 
-  		
-  	
-  	   	Enter your option: <input id="input_box" autofocus="autofocus"></input>
-
+  	   	Enter your option: <input id="input_box" autofocus="auotfocus"></input>
         </div>
       </div>
   	</div>
@@ -63,12 +60,49 @@
     <div id="here">
     </div>
 
-  <!-- <div>
-      <p class="green">Executing education.sh...</p><div class="green"><u>University of Maryland, Baltimore County</u><br></div><div class="timeline"><i>August 2015 - May 2017</i></div> - <b>Master of Science - Computer Science</b><br> - <b>GPA </b> : 3.83 <br><b> - Courses Taken: </b></div><br><div class="green"><u>University of Pune<b>Bachelor of Engineering - Computer Engineering</b></u></div><div class="timeline"><i>August 2009 - July 2013</i></div><br>
-    </div>
- -->
+    
+    <div class="right_content col-md-8" id="right_content">
+      <p class="green">Executing about_me.sh...</p><div>Hello Howdy! Hows you doing?<br></div><image src="img/kshiprakode.png" style="height:300px; width:300px;"></img>
+<!--     <div class="project_title"><h2>Activity Tracker</h2></div>
+    In Activity Tracker, I implemented a rudimentary version of one of the hardware based activity tracker. We made use of the Android Accelerometer Senser for this purpose. This sensor measures 3 values related to 3 different axes - x,y and z. The fluctuation of these values is used to detect the activity performed by the user.
 
-  </div>
+    Using default ListView, the Main Activity shows the activity history with the most recent activity displayed first.
+
+    A bounded service is spawned, as soon as the MainActivity starts. The service uses a Handler to collect data for 2 minutes and then runs the activity detection algorithm on it.
+
+    Also, we assume that the phone is attached to the wrist or is either in the front pocket.
+
+    <p class="green">How to use:</p>
+    <ul> 
+      <li>The application spawns an activity on the event of start of application</li>
+      <li>When you go to the activity, the activities along with the start and the end time are displayed on the screen</li>
+      <li>These activities are also logged into a file named ‘Activity_Meter.txt’ created on the sdcard</li>
+    </ul>
+    <br>
+    We have detected the variations in motion by monitoring the acceleration by implementing the following data sampling algorithm for the x, y and z values collected over a span of 2 minutes.
+
+    <p class="green">Algorithm Used: </p>
+
+    1. Collect x, y, z values for 120000ns.
+    2. While time not elapsed (Implemented using Handler)
+                  a. if  x < 2 and y < 2 and z > 8
+                                 sleepCounter++
+                  b. else if x < 2 and z < 2 and z > 8
+                                 sitCounter++
+                  c. else
+                                 walkCounter++
+    //For each sample, we are trying to find the associated activity and incrementing the counter associated with it.
+    3. a. If sleepCounter is maximum,
+                                 action_detected = SLEEPING
+       b. else if SitCounter is maximum,
+                                 action_detected = SITTING
+       c. else if walkCounter is Maximum,
+                                 action_detected = WALKING
+    4. Log the activity in the file.
+    4. Goto 1. -->
+
+    </div>
+
 </body>
 
 <script type="text/javascript">
@@ -109,6 +143,69 @@ document.getElementById("input_box_projects").addEventListener("keydown", functi
 }, false);
 
 
+function addEducation(){
+var newDiv = document.createElement("div"); 
+  newDiv.className = "right_content col-md-8";
+  newDiv.id = "right_content";
+   newDiv.innerHTML = '<div> <p class="green">Executing education.sh...</p> <div class="green"> <a href="http://www.umbc.edu" ><b class="green">University of Maryland, Baltimore County</b></a><br/> </div> <div > <i>August 2015 - May 2017</i> </div> - <b>Master of Science - Computer Science</b><br /> - <b>GPA</b> : 3.83<br /> - <b>Courses Taken:</b><br> &emsp;Design and Analysis of Algorithms<br> &emsp;Advanced Operating Systems<br> &emsp;Advanced Computer Architecture<br> &emsp;Software Oriented Computing<br> &emsp;Mobile Computing<br> &emsp;Artifical Intelligence<br> &emsp;Machine Learning<br> &emsp;Semantic Web<br> <br> <div class="green"> <a href="http://www.unipune.ac.in/"><b class="green">University of Pune, India</b></a><br/> </div> <div> <i>August 2009 - July 2013</i> </div> - <b>Bachelor of Engineering - Computer Engineering</b><br /> - <b>GPA</b> : 3.5<br /> - <b>Courses Taken:</b> <br> &emsp;Advance Database Management Systems <br> &emsp;Design and Analysis Algorithms <br> &emsp;Distributed Operating Systems <br> &emsp;Software Engineering <br> &emsp;Software Architecture <br> &emsp;Object Oriented Modelling and Design <br> &emsp;Principles of Programming Languages <br> &emsp;Advance Computer Architecture <br> &emsp;Data Structure and Algorithms <br> &emsp;Database Management Systems </div>';
+  if(document.contains(document.getElementById("right_content")))
+    document.getElementById("right_content").innerHTML = newDiv.innerHTML;
+  else
+  {
+    var parentDiv = document.getElementById("row"); 
+    var currentDiv = document.getElementById("here"); 
+    parentDiv.insertBefore(newDiv, currentDiv.nextSibling); 
+  }
+}
+
+function addSoundless(){
+var newDiv = document.createElement("div"); 
+  newDiv.className = "right_content col-md-8";
+  newDiv.id = "right_content";
+   newDiv.innerHTML = '<div class="project_title"><h2>Soundless</h2></div> Want to avoid the awkward stares when your phone makes a buzz in an important meeting?<br> Soundless Application is for you! It seamlessly helps you through all the meetings and event automatically changing the Audio Profile of the phone as per your schedule. Soundless is an application that allows you to sync your google calendar accounts and automatically turns the phone on silent when you are in events. It saves you from those awkward and unwanted stares.<br><br> <b class="green">Application Working - </b> <br>For our application to work, the user needs to have events in the calendar and give the application permission to access the calendar <ul> <li>On installing our application, the user will be first asked for permissions to access the calendar and also will have to select the user account for which he wants the application to work for. Our application requires internet access for seamless working.</li> <li>The application pulls the events from the google calendar, goes through them one by one and checks if there is a current event and changes the audio of the phone if there is a current event. This keeps happening periodically.</li> <li>When the audio profile of the phone is changed, the user is notified via a notification in the phone drawer about the change.</li> <li>The application is built in a way that it is easy to stop the service by just killing the application and started easily by just running the application and allowing it to run in the background.</li> </ul> <a href="https://github.com/kshiprakode/Soundless"><p class = green> Source Code </p></a>';
+  if(document.contains(document.getElementById("right_content")))
+    document.getElementById("right_content").innerHTML = newDiv.innerHTML;
+  else
+  {
+    var parentDiv = document.getElementById("row"); 
+    var currentDiv = document.getElementById("here"); 
+    parentDiv.insertBefore(newDiv, currentDiv.nextSibling); 
+  }
+}
+
+
+function addLocationBump(){
+var newDiv = document.createElement("div"); 
+  newDiv.className = "right_content col-md-8";
+  newDiv.id = "right_content";
+   newDiv.innerHTML = ' <div class="project_title"><h2>Location Bump</h2></div>"LocationBump" is a location based application in which, the user can add a destination of his choice and when his current location is within 200 meters radius of the added destination, the user is notified regarding the same by a toast raised every 10 seconds. <br><br><p class="green">Application Working:</p><ul><li> When the user launches the app, he is presented with an EditText where he can add the desired location, and a google map showing the current location of the user by using a red marker.</li><li> When the user enter a destination in the EditText and clicks on "Add", the destination is added and is represented by a blue marker on the map. Also, a circle of radius 200 meters is shown around the blue destination marker. (The opacity of the surrounding periphery is updated after the video)</li><li> When the user enters the region within 200 meters radius from the added destination ( into the blue area shown by the circle ), the red marker representing the current location gets updated appropriately (it is now in the blue circle). Also, a toast is raised every 10 seconds, which shows the distance of the user from the destination added (which obviously is less than 200)</li><li> If I close the application and relaunch it, the last added destination is retrieved from the shared preferences and is appropriately showed by using a blue marker, on the map.</li></ul><a href="https://github.com/kshiprakode/LocationAlertAndroid" class="green">Source Code</a>';
+  if(document.contains(document.getElementById("right_content")))
+    document.getElementById("right_content").innerHTML = newDiv.innerHTML;
+  else
+  {
+    var parentDiv = document.getElementById("row"); 
+    var currentDiv = document.getElementById("here"); 
+    parentDiv.insertBefore(newDiv, currentDiv.nextSibling); 
+  }
+}
+
+
+
+function addResumeText(){
+var newDiv = document.createElement("div"); 
+  newDiv.className = "right_content col-md-8";
+  newDiv.id = "right_content";
+   newDiv.innerHTML = '<p class="green">executing display_resume.sh</p>Please check the newly opened browser tab to have a look at the resume';
+  if(document.contains(document.getElementById("right_content")))
+    document.getElementById("right_content").innerHTML = newDiv.innerHTML;
+  else
+  {
+    var parentDiv = document.getElementById("row"); 
+    var currentDiv = document.getElementById("here"); 
+    parentDiv.insertBefore(newDiv, currentDiv.nextSibling); 
+  }
+}
+
 
 function addMenu () { 
   // create a new div element 
@@ -116,8 +213,8 @@ function addMenu () {
   var newDiv = document.createElement("div"); 
   newDiv.className = "col-md-8";
   newDiv.innerHTML = '<div class="cmd">/kshiprakode/welcome.sh$ </div> <button onclick="addAboutMe();"><b class="green"><u>A</u></b>bout Me</button><br> <button onclick="addWorkEx();"><b class="green"><u>W</u></b>ork Experience</button><br> <button><b class="green"><u>E</u></b>ducation</button><br> <button><a target="_blank" href="https://drive.google.com/file/d/0Byh8YDIzM2ICZ3ltT3J4NENTLTQ/view?usp=sharing"><b class="green"><u>R</u></b><span class="noFormat">esume</span></a></button><br> <button onclick="addProjectMenu();"><b class="green"><u>P</u></b>rojects</button><br> <button onclick="addContactMe();"><b class="green"><u>C</u></b>ontact Me!</button><br> Enter your option: <input id="input_box" autofocus="autofocus"></input></div> ';
-  // add the newly created element and its content into the DOM 
-  if(document.contains(document.getElementById("right_content")))
+  // add the newly created element and its content into the DOM
+   if(document.contains(document.getElementById("right_content")))
     document.getElementById("right_content").remove();
 
     document.getElementById("menu").innerHTML = newDiv.innerHTML;
@@ -166,7 +263,7 @@ function addProjectMenu () {
   // and give it some content 
   var newDiv = document.createElement("div"); 
   newDiv.className = "col-md-8";
-  newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button><b class="green"><u>B</u></b>.Aware: Seattle Safety</button><br><button>S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button><b class="green"><u>L</u></b>ocation Alert</button><br><button onclick="addMenu();"><b class="green"><u>M</u></b>ain Menu</button><br></div>Enter your option: <input id="input_box_projects" autofocus="autofocus"></input>';
+  newDiv.innerHTML = '<p class="green">Executing projects_menu.sh...</p><div class="cmd">/kshiprakode/projects_menu.sh$ </div> <div><button><b class="green"><u>S</u></b>mart Home Automation System</button><br><button>2 <b class="green"><u>E</u></b>dge Connectivity in direct Graphs</button><br><button onclick="addBAware();"><b class="green"><u>B</u></b>.Aware: Seattle Safety</button><br><button onclick="addSoundless();">S<b class="green"><u>o</u></b>undless</button><br><button><b class="green"><u>A</u></b>ctivity Tracker</button><br><button onclick="addLocationBump();"><b class="green"><u>L</u></b>ocation Alert</button><br><button onclick="addMenu();"><b class="green"><u>M</u></b>ain Menu</button><br></div>Enter your option: <input id="input_box_projects" autofocus="autofocus"></input>';
   // add the newly created element and its content into the DOM 
   if(document.contains(document.getElementById("right_content")))
     document.getElementById("right_content").remove();
@@ -175,13 +272,32 @@ function addProjectMenu () {
 
 }
 
+function addBAware() { 
+  // create a new div element 
+  // and give it some content 
+    var newDiv = document.createElement("div"); 
+  newDiv.className = "right_content col-md-8";
+  newDiv.id = "right_content";
+  newDiv.innerHTML = ' <div class="project_title"><h2>B.Aware Seattle Safety</h2></div> The project aimed at providing some service to a particular set of users by usage and analysis of a large dataset. We used a dataset of 9/11 calls and the registered complaints and analysed the safety of a particular area at a particular time, especially for Seattle. <br> <br> <p class="green">The project aimed to provide the following features:</p> <ul> <li>Analyse and rank a particular area for different crimes</li> <li>Display a safety meter for a particular area at a given time</li> <li>Discover potential trends in crimes</li> <li>Geographical representation of different crimes happening in the city at a particular place at a particular time</li> <li>List of crimes happening</li> <li>Provide safety recommendations depending on the crime history of that particular area</li> </ul> <p class="green">We aimed at providing this service to the following users:</p> <ul> <li>Visitors – New to town</li> <li>Local Residents – to check crime statistics</li> <li>Possible Residents – residents moving to a new locality</li> </ul> <p class="green">We did the data analysis of the acquired database in the following way:</p> <ul> <li>Assigned a safety value to each crime. By doing this, we could give a safety number to every area under consideration and thus plot a safety graph of the area or know the crime rank for the same</li> <li>Calculated the closest latitude longitude for each sector so that we could map every area in consideration to one of the 18 sectors in which we had logically divided Seattle for the analysis purpose</li> <li>Analyzed crimes happening in an area, based on time</li> <li>Ranked an area on the basis of safety factor</li> </ul> <p class="green">Technologies used:</p> The server was written using Django web framework. The data obtained was partitioned into approriate subclasses and views in SQL and the appropriate data was obtained by writing the appropriate subqueries in MySql. <ul> </ul> <p class="green">My Contribution:</p> I was responsible for the Data analysis part in the project. My responsibilities included acquiring of the updated 9/11 database, data dumping and storage in the SQL server, partitioning of the database into appropriate views and sub-databases. I was also responsible for framing and execution of the sub queries to retrieve appropriate analysed data from the database so that the front end can display the results to the user. I was also responsible for manual analysis of the data and to analyse and determine the safety number to be assigned to each crime and the threshholds to be decided for the plotting of the safety meter and the crime rank of that area.';
+  // add the newly created element and its content into the DOM 
+  if(document.contains(document.getElementById("right_content")))
+    document.getElementById("right_content").innerHTML = newDiv.innerHTML;
+  else
+  {
+    var parentDiv = document.getElementById("row"); 
+    var currentDiv = document.getElementById("here"); 
+    parentDiv.insertBefore(newDiv, currentDiv.nextSibling); 
+  }
+}
+
+
 
 function addAboutMe () 
 { 
   var newDiv = document.createElement("div"); 
   newDiv.className = "right_content col-md-8";
   newDiv.id = "right_content";
-  newDiv.innerHTML = '<p class="green">Executing about_me.sh...</p><div>Hello Howdy! Hows you doing?<br></div>';
+  newDiv.innerHTML = '<p class="green">Executing about_me.sh...</p><div>Hello Howdy! Hows you doing?<br></div><image src="img/kshiprakode.png" style="height:300px; width:300px;"></img>';
   // add the newly created element and its content into the DOM 
 
   if(document.contains(document.getElementById("right_content")))
